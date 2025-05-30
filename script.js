@@ -1,3 +1,4 @@
+// variables
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
 
@@ -32,10 +33,10 @@ startScanBtn.addEventListener('click', () => {
     progressBar.style.width = '0%';
     scanProgress.style.display = 'block';
     startScanBtn.disabled = true;
-    
+    //Original progress to 0
     let progress = 0;
     const interval = setInterval(() => {
-        progress += 1;
+        progress += 1; // Goes up at a constant pace
         progressBar.style.width = progress + '%';
         
         if (progress >= 100) {
@@ -51,7 +52,7 @@ startScanBtn.addEventListener('click', () => {
         }
     }, 50);
 });
-
+// testimonials slider
 const sliderDots = document.querySelectorAll('.slider-dot');
 const slides = document.querySelectorAll('.testimonial-slide');
 
@@ -71,7 +72,7 @@ const contactForm = document.getElementById('contactForm');
 
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+    //more variables for contact section
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const subject = document.getElementById('subject').value;
